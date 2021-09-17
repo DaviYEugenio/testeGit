@@ -10,15 +10,15 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
-* Classe que representa a tabela CLUBE
+* Classe que representa a tabela JOGADORES
 * @generated
 */
 @Entity
-@Table(name = "\"CLUBE\"")
+@Table(name = "\"JOGADORES\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.clube")
-public class clube implements Serializable {
+@JsonFilter("app.entity.Jogadores")
+public class Jogadores implements Serializable {
 
     /**
     * UID da classe, necessário na serialização
@@ -41,18 +41,10 @@ public class clube implements Serializable {
         private java.lang.String nome;
 
     /**
-    * @generated
-    */
-    @ManyToOne
-    @JoinColumn(name="fk_jogadores", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
-        
-        private Jogadores jogadores;
-
-    /**
     * Construtor
     * @generated
     */
-    public clube(){
+    public Jogadores(){
     }
 
     /**
@@ -70,7 +62,7 @@ public class clube implements Serializable {
     * @param id id
     * @generated
     */
-    public clube setId(java.lang.String id){
+    public Jogadores setId(java.lang.String id){
         this.id = id;
         return this;
     }
@@ -89,27 +81,8 @@ public class clube implements Serializable {
     * @param nome nome
     * @generated
     */
-    public clube setNome(java.lang.String nome){
+    public Jogadores setNome(java.lang.String nome){
         this.nome = nome;
-        return this;
-    }
-    /**
-    * Obtém jogadores
-    * return jogadores
-    * @generated
-    */
-    
-    public Jogadores getJogadores(){
-        return this.jogadores;
-    }
-
-    /**
-    * Define jogadores
-    * @param jogadores jogadores
-    * @generated
-    */
-    public clube setJogadores(Jogadores jogadores){
-        this.jogadores = jogadores;
         return this;
     }
 
@@ -120,7 +93,7 @@ public class clube implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-clube object = (clube)obj;
+Jogadores object = (Jogadores)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }
